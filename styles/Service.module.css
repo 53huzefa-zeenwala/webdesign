@@ -1,0 +1,72 @@
+
+.services {
+    @apply flex flex-col justify-center items-center py-6 px-6 gap-4 relative
+}
+.tagline {
+    @apply p-2 rounded
+}
+.services > h1 {
+    @apply text-[2.75rem] leading-[3.5rem] tracking-tight text-center font-bold
+}
+.main {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 py-10 gap-y-10
+}
+
+/* indual service style  */
+.service {
+    @apply flex flex-col gap-4 justify-center items-center
+}
+.service > div{
+    @apply flex items-center justify-center h-36 w-36 rounded-full text-[2rem] 
+}
+.service > h1 {
+    @apply text-2xl font-bold capitalize
+}
+.service > p {
+@apply text-xl  text-center max-w-md
+}
+.service > p { 
+    @apply max-w-[16rem]
+}
+
+.tagline > h6 {
+    background: var(--color-gradient-1);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    font-family: 'Poppins', sans-serif;
+}
+.tagline {
+    background-color: var(--text-gray-300);
+}
+.services > hr {
+    border-color: var(--text-gray-200);    
+}
+
+
+
+
+
+/* indual service style  */
+ .service > h1 {
+    color: var(--text-white);
+}
+ .service > p {
+    color: var(--text-gray-100);
+}
+
+.main > div:first-child  > div > div {
+    background-color: var(--color-primary-dark);
+    color: var(--color-primary);
+}
+.main > div:nth-child(2) > div  > div {
+    background-color: var(--color-secondary-dark);
+    color: var(--color-secondary);
+}
+.main > div:nth-child(3) > div  > div {
+    background-color: var(--color-tertiary-dark);
+    color: var(--color-tertiary);
+}
+.main > div:nth-child(4) > div  > div {
+    background-color: var(--color-pink-dark);
+    color: var(--color-pink);
+}

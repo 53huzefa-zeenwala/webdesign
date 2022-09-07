@@ -1,0 +1,38 @@
+.contact {
+    @apply py-10 z-10 relative
+}
+
+.form {
+    @apply flex flex-col gap-5 px-8 sm:pt-10 pt-4 pb-5
+}
+
+.form > .first {
+    @apply flex flex-col gap-5 md:flex-row
+}
+
+.input, .textarea {
+    @apply space-y-2.5 w-full
+}
+
+.label {
+    @apply text-base uppercase font-medium tracking-wide
+}
+.label {
+    color: var(--text-gray-100); 
+}
+
+.input > input, .textarea > textarea{
+    @apply w-full rounded-md px-4 py-2 text-lg outline-none transition-shadow
+}
+.textarea > textarea {
+    @apply h-28
+}
+.input > input, .textarea > textarea{
+    background-color: var(--text-gray-300);
+    color: var(--text-white);
+    border: 2px solid var(--text-gray-200);
+}
+.input > input:focus, .textarea > textarea:focus,.input > input:hover, .textarea > textarea:hover{
+    box-shadow: inset 0px 0px 10px -1px var(--text-gray-100);
+    opacity: .75;
+}

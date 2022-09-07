@@ -1,0 +1,29 @@
+
+.heading {
+    @apply flex flex-col justify-center items-center py-6 px-6 gap-4
+}
+.tagline {
+    @apply p-2 rounded
+}
+.heading > h1 {
+    @apply text-[2.75rem] leading-[3.5rem] tracking-tight text-center font-bold
+}
+.heading > p {
+    @apply text-xl  text-center max-w-md
+}
+.heading > h1 {
+    color: var(--text-white);
+}
+.heading > p {
+    color: var(--text-gray-100);
+}
+
+.tagline > h6 {
+    background: var(--color-gradient-1);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    font-family: 'Poppins', sans-serif;
+}
+.tagline {
+    background-color: var(--text-gray-300);
+}

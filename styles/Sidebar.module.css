@@ -1,0 +1,75 @@
+@tailwind components;
+
+@layer components {
+    .Sidebar {
+        @apply fixed left-0 top-0 h-screen w-screen flex justify-center z-50
+    }
+    .mainSidebar {
+        @apply h-full w-fit min-h-screen px-8 py-4
+    }
+    .closeSidebar {
+        @apply h-full w-full
+    }
+    .logoDiv {
+        @apply flex justify-center items-center gap-2 border-b-[1px] py-4
+    }
+    
+    .logoImage {
+        @apply h-12 aspect-square rounded-full flex justify-center items-center overflow-hidden
+    }
+    
+    .logoDiv>h1 {
+        @apply text-2xl font-bold
+    }
+    .closeButton {
+        @apply aspect-square h-9 text-2xl ml-4 mt-1.5 rounded-full flex justify-center items-center
+    }
+    .links {
+        @apply flex flex-col gap-5 capitalize text-xl font-medium mr-5 py-8 w-full
+    }
+    .links > li {
+       @apply border-b-[1px] pb-3
+    }
+}
+
+.Sidebar {
+    transition: transform 0.5s;
+}
+
+.mainSidebar {
+    background-color: var(--text-gray-300);
+}
+
+.closeSidebar {
+    background-color: #000;
+    opacity: .4;
+}
+
+.Sidebar[data-sidebaropen='false'] {
+    transform: translateX(-100%);
+}
+
+
+
+.logoImage {
+    background: var(--color-gradient-1);
+}
+
+.logoDiv, .links > li {
+    border-color: var(--color-border-dark);
+}
+
+.logoDiv>h1 {
+    color: var(--text-white);
+}
+.closeButton {
+    color: var(--color-svg-dark);
+    background-color: var(--text-gray-200);
+}
+
+.links {
+    color: var(--text-gray-100);
+}
+.links > li:hover {
+    color: var(--color-primary);
+}

@@ -1,0 +1,42 @@
+.methods {
+    @apply flex flex-col justify-center items-center gap-4 px-10 mt-[4rem] relative pb-20
+}
+.main {
+    @apply flex flex-col gap-10 justify-center w-full sm:w-10/12 lg:w-full items-center lg:flex-row
+}
+
+.lists {
+    @apply flex flex-col justify-center gap-4 w-full lg:max-w-sm
+}
+
+
+
+.lists > div > button {
+    @apply w-full py-8 px-8 rounded-xl space-y-6 transition-colors duration-300 flex flex-col justify-center items-center lg:items-start lg:justify-start lg:text-left 
+}
+
+.lists > div > button:hover, .active {
+    background-color: var(--text-gray-300);
+}
+.lists > div > button:hover > h1, .lists > .active > h1{
+    color: var(--text-white);
+}
+
+.lists > div > button > h1 {
+    @apply text-[2rem] leading-[2rem] font-bold capitalize transition-colors duration-300
+}
+.lists > div > button > p {
+    @apply text-xl max-w-md
+}
+.lists > div > button > h1,
+.lists > div > button > p  {
+    color: var(--text-gray-100);
+}
+
+.image {
+    @apply relative w-full h-96 lg:h-[38rem]
+}
+
+.methods > hr {
+    border-color: var(--text-gray-200);    
+}

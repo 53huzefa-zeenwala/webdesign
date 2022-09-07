@@ -1,0 +1,69 @@
+@tailwind components;
+
+@layer components {
+    .navbar {
+        @apply fixed top-0 w-full flex justify-between px-8 sm:px-12 py-4 h-[5.5rem] border-b-[1px] z-40
+    }
+
+    .logoDiv {
+        @apply flex justify-center items-center gap-2
+    }
+
+    .logoImage {
+        @apply h-full aspect-square rounded-full flex justify-center items-center overflow-hidden
+    }
+
+    .logoDiv>h1 {
+        @apply text-2xl font-bold
+    }
+
+    .toggleSidebar,
+    .toggleTheme {
+        @apply text-2xl flex justify-center items-center h-10 aspect-square  rounded-full
+    }
+    .toggleSidebar {
+        @apply lg:hidden
+    }
+    .linksDiv {
+        @apply flex justify-center items-center sm:gap-6 gap-4
+    }
+    .links {
+        @apply lg:flex hidden gap-5 justify-center items-center capitalize text-xl font-medium mr-5
+    }
+}
+
+.navbar {
+    background-color: var(--Nav-bg);
+    border-color: var(--color-border);
+    box-shadow: 0px -2px 10px 0 var(--text-white);
+}
+
+.logoImage {
+    background: var(--color-gradient-1);
+}
+
+.logoDiv>h1 {
+    color: var(--text-white);
+}
+.links {
+    color: var(--text-gray-100);
+}
+.links > li:hover {
+    color: var(--color-primary);
+}
+
+.toggleTheme {
+    color: var(--text-gray-300);
+    background-color: var(--text-white);
+}
+.toggleTheme:hover {
+    opacity: 0.75;
+}
+.toggleSidebar:hover {
+    fill-opacity: 0.6;
+    
+}
+.toggleSidebar {
+    color: var(--text-white);
+    background-color: var(--text-gray-300);
+}

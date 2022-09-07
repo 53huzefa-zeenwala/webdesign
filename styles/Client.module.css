@@ -1,0 +1,50 @@
+.client {
+   @apply relative mb-2 w-full pb-12
+}
+
+
+.slide {
+    @apply flex flex-col gap-4 justify-center items-center px-16 py-8 sm:px-24 lg:flex-row-reverse lg:gap-14 lg:py-12
+}
+.imageDiv {
+    @apply h-60 w-60 lg:h-80 lg:min-w-[20rem] rounded-full flex justify-center items-center mb-6 mt-8
+}
+.imageDiv {
+    background: var(--color-gradient-1);
+}
+.imageDiv > div{
+    @apply relative w-11/12 aspect-square rounded-full overflow-hidden
+}
+.detailDiv {
+    @apply flex flex-col lg:max-w-xl
+}
+.detailDiv {
+    color: var(--text-gray-100); 
+}
+.detailDiv > h1{
+    @apply text-4xl relative py-6
+}
+.detailDiv > h1 > span{
+    @apply text-9xl absolute -top-8 -left-6 -z-10
+}
+.detailDiv > h1 > span {
+    color: var(--text-gray-200);
+}
+.detailDiv > p{
+    @apply text-xl sm:text-2xl lg:text-3xl italic tracking-wide leading-9 pb-4 lg:leading-[3.25rem]
+}
+.detailDiv > h2{
+    @apply text-3xl py-4
+}
+.detailDiv > h2{
+    color: var(--text-white);
+}
+.detailDiv > h5{
+    @apply text-lg pb-8
+}
+
+
+.client > hr {
+    border-color: var(--text-gray-200);
+    margin-inline: 4.17%;
+}

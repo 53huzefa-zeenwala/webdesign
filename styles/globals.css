@@ -1,26 +1,101 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 90px;
+}
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.parentDiv[data-darktheme="true"] {
+    /* major background color */
+    --body-bg: #000;
+    --Nav-bg: #040404;
+    
+    --color-primary-dark: #011827;
+    --color-secondary-dark: #190301;
+    --color-tertiary-dark: #150b40;
+    --color-pink-dark: #2f011d;
+   
+    /* text color  */
+    --text-white:#fff;
+    --text-nav:var(--text-white);
+    --text-gray-100: #acacac;
+    --text-gray-200: #1e1e1e;
+    --text-gray-300: #0f0f11;
+
+    --box-shadow: inset 0px 0px 14px 0px #f0f9ff59;
 }
 
-* {
-  box-sizing: border-box;
+.parentDiv[data-darktheme="false"] {
+    --body-bg: #e5e5e5;
+    --Nav-bg: #f5f8fa;
+    
+    --color-primary-dark: #f0f9ff;
+    --color-secondary-dark: #ffedec;
+    --color-tertiary-dark: #ece9fa;
+    --color-pink-dark: #fcdbef;
+    
+    /* text color  */
+    --text-white:#181818;
+    --text-nav:#1f1f1f;
+    --text-gray-100: #595b5e;
+    --text-gray-200: #c5c5c5;
+    --text-gray-300: #f5f5f5;
+
+    --box-shadow: inset 0px 0px 14px 0px #01182759;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.parentDiv {
+    --color-svg-dark: #fff;
+    --color-pink: #e33fa1;
+    --color-primary: #059dff;
+    --color-secondary: #fb5343;
+    --color-tertiary: #6549d5;
+    --color-border: #363636;
+    --color-gradient-1: linear-gradient(95deg, var(--color-primary) 15%, var(--color-tertiary) 45%, var(--color-pink) 75%, var(--color-secondary) 100%) 95%/200% 100%;
+}
+
+.mainDiv {
+    background-color: var(--body-bg);
+}
+
+
+.swiper-pagination-bullet-active, .swiper-pagination-bullet {
+    background-color: var(--text-white) !important;
+}
+
+.coverDiv {
+    --size:400px;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.coverDiv::after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg,var(--color-secondary),var(--color-tertiary));
+    width: var(--size);
+    top: calc((var(--size) / -2) + 90px);
+    right: calc(var(--size) / -2);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    opacity: .25;
+    filter: blur(100px);
+}
+.coverDiv::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg,var(--color-primary),#36c6f0);
+    width: var(--size);
+    bottom: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    opacity: .25;
+    filter: blur(100px);
 }

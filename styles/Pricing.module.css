@@ -1,0 +1,109 @@
+.pricing {
+    @apply mt-16 relative mb-2 flex items-center flex-col pb-10
+}
+
+.main {
+    @apply px-6 py-6 flex flex-col justify-center gap-14 pb-12 md:flex-row md:items-center
+}
+.priceDiv {
+    @apply flex justify-center py-14 rounded-xl px-10 flex-col items-center text-center lg:max-w-md md:max-w-sm max-w-md w-full
+}
+
+.priceDiv {
+    box-shadow:var(--box-shadow);
+    background-color: var(--text-gray-200);
+}
+
+.priceDiv > h1 {
+    @apply text-5xl font-semibold
+}
+
+.priceDiv > h1, .priceDiv > h3 {
+    color: var(--text-white);
+    font-family: sans-serif;
+}
+
+.priceDiv > p {
+    @apply text-lg w-9/12 py-5
+}
+
+.priceDiv > p {
+    color: var(--text-gray-100);
+    font-family: sans-serif;
+}
+.priceDiv > h3 {
+    @apply text-5xl font-bold flex justify-start py-4
+}
+
+.priceDiv > h3 > span{
+    @apply text-xl 
+}
+
+.priceDiv > .buttonDiv {
+    @apply flex flex-col gap-4 w-full py-4
+}
+
+.buttonOne, .buttonTwo {
+    @apply py-4 px-6 rounded-xl flex justify-center items-center gap-2 outline-none
+}
+
+.buttonOne {
+    @apply text-white
+}
+.buttonTwo {
+    @apply border-[1px]
+}
+
+.buttonOne {
+    background: var(--color-gradient-1);
+    transition: box-shadow 0.5s ease;
+}
+.buttonOne:hover, .buttonOne:focus {
+    box-shadow: 0 0 14px 4px var(--color-secondary);
+}
+.buttonTwo {
+    transition: all 0.5s ease;
+    color: var(--text-white);
+    border-color: var(--text-white);    
+}
+.buttonTwo:hover, .buttonTwo:focus {
+    color: var(--text-gray-300);
+    border-color: var(--text-gray-300);
+    background-color: var(--text-white);
+}
+
+.rating {
+    @apply py-4 font-medium space-y-2
+}    
+.rating > p {
+    color: var(--text-gray-100);
+}
+
+
+.plans {
+    @apply m-auto flex flex-col gap-10 lg:pl-16
+}
+
+
+.plan{
+    @apply w-full flex flex-col gap-4 items-start
+}
+.plan >h1  {
+    @apply text-3xl font-bold
+}
+.plan >h1  {
+    color: var(--text-white);
+}
+
+.plan >div>div  {
+    @apply flex justify-start gap-2 items-center text-[1.15rem] font-medium py-1
+}
+.plan >div>div  {
+    color: var(--text-gray-100);
+    
+}
+
+
+.pricing > hr {
+    border-color: var(--text-gray-200);    
+}

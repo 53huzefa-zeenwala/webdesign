@@ -1,0 +1,63 @@
+@tailwind components;
+
+@layer components {
+    .header {
+        @apply flex flex-col justify-center items-center gap-4 px-6 lg:px-12 py-4 mt-[5.5rem] lg:flex-row-reverse relative mb-10
+    }
+    .header > .image {
+        @apply aspect-square w-96 lg:w-[60rem] relative md:mt-6 mt-2.5 lg:mr-4
+    }
+    .header > .main {
+        @apply space-y-6 lg:w-[80%] w-full h-full
+    }
+    .header > .main > h1 {
+        @apply font-bold text-center h-full pb-2 px-3 text-[2.7rem] leading-[3.5rem] md:text-6xl md:leading-[4.5rem] lg:text-left lg:text-7xl lg:leading-[4.7rem] lg:pt-8
+    }
+    .header > .main > p {
+        @apply text-center lg:text-left text-2xl pb-2 px-3 
+    }
+    
+    .header > .main > div {
+        @apply flex gap-4 sm:gap-8 justify-center pt-4 lg:justify-start pb-8 
+    }
+    .buttonOne, .buttonTwo {
+        @apply py-4 px-6 rounded-full flex justify-center items-center gap-1 outline-none
+    }
+    .buttonOne {
+        @apply text-white
+    }
+    .buttonTwo {
+        @apply border-[1px]
+    }
+}
+.header > .main > h1 {
+    background: var(--color-gradient-1);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    font-family: 'Poppins', sans-serif;
+}
+.header > .main > p {
+    color: var(--text-gray-100);
+}
+
+.buttonOne {
+    background: var(--color-gradient-1);
+    transition: box-shadow 0.5s ease;
+}
+.buttonOne:hover, .buttonOne:focus {
+    box-shadow: 0 0 14px 4px var(--color-secondary);
+}
+.buttonTwo {
+    transition: all 0.5s ease;
+    color: var(--text-white);
+    border-color: var(--text-white);    
+}
+.buttonTwo:hover, .buttonTwo:focus {
+    color: var(--text-gray-300);
+    border-color: var(--text-gray-300);
+    background-color: var(--text-white);
+}    
+
+.header > hr {
+    border-color: var(--text-gray-200);    
+}

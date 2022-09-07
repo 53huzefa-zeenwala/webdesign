@@ -1,0 +1,133 @@
+.footer {
+    @apply px-6 pt-10 border-t-[1px] sm:px-10 lg:px-24 xl:px-28 z-20 relative
+}
+
+.footer {
+    border-color: var(--color-border);
+    background-color: var(--Nav-bg);
+}
+.main {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:flex gap-6 lg:gap-10
+}
+
+.about {
+    @apply max-w-xs
+}
+
+.logoDiv {
+    @apply flex justify-start items-center gap-2 h-20
+}
+
+.logoImage {
+    @apply h-full aspect-square rounded-full flex justify-center items-center overflow-hidden
+}
+
+.logoDiv>h1 {
+    @apply text-2xl font-bold
+}
+
+.logoImage, .subscription > button {
+    background: var(--color-gradient-1);
+}
+
+.logoDiv>h1 {
+    color: var(--text-white);
+}
+.about > p {
+    @apply sm:text-lg pt-6 font-medium
+}
+.about > p {
+    color: var(--text-gray-100);
+}
+
+.lists{
+    @apply flex flex-col gap-4 py-2 lg:w-48
+}
+.lists > div{
+    @apply flex flex-col gap-2
+}
+
+.lists > div > h1, .subscription > h1 {
+    @apply text-lg md:text-xl font-bold capitalize
+}
+.lists > div > h3, .subscription > h5 {
+    @apply text-sm sm:text-base font-medium capitalize relative cursor-pointer w-fit
+}
+
+.lists > div > h1, .subscription > h1 {
+    color: var(--text-white);
+}
+.lists > div > h3, .subscription > h5 {
+    color: var(--text-gray-100);
+}
+
+.botSection > ul > li::before,
+.lists > div > h3::before {
+    position: absolute;
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    width: 0%;
+    color: var(--color-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+.botSection > ul > li::after,
+.lists > div > h3::after {
+    position: absolute;
+    content: attr(data-content);
+    bottom: -0.5px;
+    left: 0;
+    height: 0.5px;
+    width: 0%;
+    background-color: var(--color-primary);
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+
+.botSection > ul > li:hover::before,
+.botSection > ul > li:hover::after,
+.lists > div > h3:hover::before,
+.lists > div > h3:hover::after {
+    width: 100%;
+}
+
+.subscription{
+    @apply flex flex-col gap-4 py-2 
+}
+
+.subscription > input {
+    @apply w-3/4 px-4 py-3 rounded-md border-2 outline-none hover:opacity-75 focus:opacity-75
+}
+.subscription > button {
+    @apply w-2/4 text-lg py-2 rounded-md text-white transition-shadow duration-500 my-1
+}
+.subscription > button:hover, .subscription > button:focus {
+    box-shadow: 0 0 14px 4px var(--color-secondary);
+}
+.subscription > input {
+    background-color: var(--text-gray-300);
+    color: var(--text-white);
+    border-color: var(--text-white);
+}
+
+.botSection {
+    @apply flex flex-col sm:flex-row gap-1 sm:gap-2 text-sm md:text-base font-medium border-t-[1px] mb-4 mt-8 items-center py-4 justify-between
+}
+.botSection {
+    border-color: var(--color-border);
+    color: var(--text-gray-100);
+}
+.botSection > ul {
+    @apply flex gap-2 pt-2 
+}
+.botSection > ul > li{
+    @apply capitalize relative cursor-pointer w-fit
+}
+
+.botSection > h6 {
+    padding-top: 0.5rem;
+    color: var(--color-tertiary);
+}
