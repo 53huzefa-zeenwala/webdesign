@@ -5,7 +5,7 @@ export default function Contact() {
     return (
         <div className={styles.contact} id="contact">
             <TopicHeading taglineText="Contact Form" heading="Contact With Us!" />
-            <from className={styles.form}>
+            <form className={styles.form}>
 
                 <div className={styles.first}>
                     <div className={styles.input}>
@@ -52,7 +52,7 @@ export default function Contact() {
                     />
                 </div>
 
-            </from>
+            </form>
         </div>
     );
 }

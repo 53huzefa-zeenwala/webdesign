@@ -4,11 +4,18 @@ import { BsFillSunFill } from 'react-icons/bs'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { HiMoon } from 'react-icons/hi'
 import SideBar from './SideBar'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Navbar({ darkTheme, setDarkTheme }) {
     const [sidebarOpen, setSidebarOpen] = useState(false)
     const linksList = ['home', 'services', 'methods', 'pricing', 'clients', 'contact']
+    useEffect(() => {
+        if (window) {
+            const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches
+            setDarkTheme(getCurrentTheme())
+        }
+    }, [])
+
 
     return (
         <>
