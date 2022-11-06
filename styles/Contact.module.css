@@ -28,11 +28,10 @@
     @apply h-28
 }
 .input > input, .textarea > textarea{
-    background-color: var(--text-gray-300);
+    background-color: var(--Nav-bg);
     color: var(--text-white);
     border: 2px solid var(--text-gray-200);
 }
 .input > input:focus, .textarea > textarea:focus,.input > input:hover, .textarea > textarea:hover{
-    box-shadow: inset 0px 0px 10px -1px var(--text-gray-100);
-    opacity: .75;
+    background-color: var(--text-gray-300);
 }
